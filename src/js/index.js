@@ -5,6 +5,7 @@ const btnConnexion = document.querySelector("#btn-connexion");
 const btnInscription = document.querySelector("#btn-inscription");
 const btnCheckConnexion = document.getElementById("btn-check-connexion");
 const btnCheckInscription = document.getElementById("btn-check-inscription");
+const hoverFormation = document.querySelectorAll(".hover-formation");
 
 if (dasboard) {
   btnConnexion.addEventListener("click", () => {
@@ -12,6 +13,18 @@ if (dasboard) {
   });
   btnInscription.addEventListener("click", () => {
     window.location.href = "auth/inscription.html";
+  });
+
+  hoverFormation.forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+      e.classList.add("hover:hover:bg-[#34495E]");
+      e.classList.add("hover:text-white");
+      e.classList.add("hover-effect"); // Ajoute une classe définie dans le CSS
+    });
+
+    e.addEventListener("mouseleave", () => {
+      e.classList.remove("hover-effect"); // Retire la classe quand la souris sort
+    });
   });
 }
 
@@ -25,4 +38,3 @@ if (inscription) {
     window.location.href = "/index.html";
   });
 }
-
