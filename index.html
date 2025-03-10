@@ -7,19 +7,12 @@
     <title>beyinfo</title>
     <link href="./src/output.css" rel="stylesheet">
     <link rel="icon" type="image/webp" href="src/assets/icones/cerveau.webp">
+    <script defer src="src/js/index.js"></script>
+    <script defer src="src/js/partials.js"></script>
 </head>
 
-<body class="">
-    <header class=" w-screen px-3 py-2 bg-slate-400 flex justify-between items-center fixed top-0">
-        <h1 class="text-white font-black text-2xl">beyinfo</h1>
-        <div class="cursor-pointer">
-            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2" stroke-linecap="round" />
-                <line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round" />
-                <line x1="3" y1="18" x2="21" y2="18" stroke="white" stroke-width="2" stroke-linecap="round" />
-            </svg>
-        </div>
-    </header>
+<body id="dasboard">
+    <div id="header-container"></div>
     <main class="flex gap-5 flex-col mt-16 px-3 items-center">
         <!-- <h2 class="text-red-600">beyinfo</h2> -->
         <p class="text-3xl mt-3 font-black text-center space-x-3">Plongez au cœur de l'ère numérique et façonner le
@@ -29,9 +22,9 @@
             des concepts numériques, mais aussi une maîtrise pratique grâce à des ateliers et projets concrets. </p>
 
         <div class="flex gap-4 justify-start p-1">
-            <button class="border border-slate-400 rounded-2xl w-fit p-2 px-4 font-bold text-white bg-slate-400">Se
+            <button id="btn-connexion" class="hover:bg-[#34495E] border border-slate-400 rounded-2xl w-fit p-2 px-4 font-bold text-white bg-slate-400">Se
                 connecter</button>
-            <button
+            <button id="btn-inscription"
                 class="border border-slate-400 rounded-2xl w-fit p-2 px-6 font-bold text-slate-400">S'inscrire</button>
         </div>
         <div class="flex items-center justify-center">
@@ -65,7 +58,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="font-bold">Initiaion à l'informatique</p>
+                        <p class="font-semibold">Initiaion à l'informatique</p>
                     </div>
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -89,7 +82,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="font-bold">Maitrise Microsoft Office</p>
+                        <p class="font-semibold">Maitrise Microsoft Office</p>
                     </div>
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -113,7 +106,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="font-bold">Conception avec Photoshop</p>
+                        <p class="font-semibold">Conception avec Photoshop</p>
                     </div>
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -137,7 +130,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="font-bold">Le basique du WEB</p>
+                        <p class="font-semibold">Le basique du WEB</p>
                     </div>
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -161,7 +154,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="font-bold">Maquetage d'un site</p>
+                        <p class="font-semibold">Prototypage d'un site</p>
                     </div>
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -185,7 +178,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="font-bold">Apprendre l'Anglais</p>
+                        <p class="font-semibold">Apprendre l'Anglais</p>
                     </div>
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -223,7 +216,7 @@
             <h2 class="text-2xl text-left font-black text-slate-600">Vos préocupations</h2>
             <div class=" flex flex-col gap-3">
                 <div class="flex flex-col justify-between items-center px-3 gap-3 rounded-xl bg-slate-100 py-2 w-full">
-                    <p class="text-xl text-justify">Vos suggestions sont les bienvenues !</p>
+                    <p class="text-lg w-full text-justify">Vos suggestions sont les bienvenues !</p>
 
                     <div class="flex flex-col gap-2 w-full">
                         <div class="flex flex-col w-full">
@@ -255,9 +248,9 @@
 
                 <!-- Liens rapides -->
                 <nav class="flex gap-3 space-y-2 md:flex-row md:space-x-6 md:space-y-0 text-sm">
-                    <a href="index.html" class="hover:underline text-lg font-bold">Accueil</a>
-                    <a href="#" class="hover:underline text-lg font-bold">Formations</a>
-                    <a href="#" class="hover:underline text-lg font-bold">Contact</a>
+                    <a href="index.html" class="hover:underline text-md font-bold">Accueil</a>
+                    <a href="#" class="hover:underline text-md font-bold">Formations</a>
+                    <a href="#" class="hover:underline text-md font-bold">Contact</a>
                 </nav>
 
                 <!-- Réseaux sociaux -->
@@ -281,8 +274,7 @@
                         </svg>
                     </a>
                 </div>
-                <p class="text-sm mt-4 md:mb-0">&copy; 2025 Beyin L-Q. Tous droits réservés.</p>
-
+                <p class="text-xs opacity-70 mt-4 md:mb-0">&copy; 2025 Beyin L-Q. Tous droits réservés.</p>
             </div>
         </footer>
 

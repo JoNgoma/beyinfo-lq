@@ -1,0 +1,49 @@
+<header id="header" class="bg-slate-400 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <!-- Logo ou titre -->
+        <h1 class="text-white font-black text-2xl">beyinfo</h1>
+        <!-- Bouton menu (visible en mobile) -->
+        <button id="menuToggle" class="md:hidden focus:outline-none">
+            <div class="space-y-1 transition-all duration-300">
+                <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </div>
+        </button>
+        <style>
+            .menu-open span:nth-child(1) {
+                transform: translateY(6px) rotate(45deg);
+            }
+
+            .menu-open span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-open span:nth-child(3) {
+                transform: translateY(-6px) rotate(-45deg);
+            }
+        </style>
+
+        <!-- Menu de navigation pour écran moyen et grand -->
+        <div class="hidden md:flex space-x-6">
+            <a href="#accueil" class="hover:bg-[#34495E] px-3 py-2 rounded">Accueil</a>
+            <a href="#formation" class="hover:bg-[#34495E] px-3 py-2 rounded">Formation</a>
+            <a href="#contact" class="hover:bg-[#34495E] px-3 py-2 rounded">Contact</a>
+        </div>
+    </div>
+    <!-- Menu mobile déroulant -->
+    <div id="mobileMenu" class="md:hidden hidden flex-col px-4 pb-4 space-y-2">
+        <a href="#accueil" class="block hover:bg-[#34495E] px-3 py-2 rounded">Accueil</a>
+        <a href="#formation" class="block hover:bg-[#34495E] px-3 py-2 rounded">Formation</a>
+        <a href="#contact" class="block hover:bg-[#34495E] px-3 py-2 rounded">Contact</a>
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
